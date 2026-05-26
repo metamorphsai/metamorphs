@@ -1,8 +1,19 @@
-# Metamorphs
+<p align="center">
+  <img src=".github/assets/banner.png" alt="Metamorphs — AI agent team that ships digital products with you" />
+</p>
 
-AI agent team that ships digital products with you — strategy, design, build, launch in one continuous loop.
+<h1 align="center">Metamorphs</h1>
 
-Live: [metamorphs.xyz](https://metamorphs.xyz)
+<p align="center">
+  AI agent team that ships digital products <em>with</em> you —<br/>
+  strategy, design, build, launch in one continuous loop.
+</p>
+
+<p align="center">
+  <a href="https://metamorphs.xyz">🌐 metamorphs.xyz</a> ·
+  <a href="https://x.com/metamorphs_ai">𝕏</a> ·
+  <a href="https://t.me/metamorphsai">Telegram</a>
+</p>
 
 ## Stack
 
