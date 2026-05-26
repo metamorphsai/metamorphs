@@ -1,0 +1,25 @@
+node_modules
+dist
+dist-ssr
+.DS_Store
+.env
+.env.local
+.env.*.local
+*.log
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Server (deployed separately; never commit secrets)
+server/node_modules
+server/.env
+server/quota.json
+server/package-lock.json
+
+# Build outputs / archives
+metamorphs-dist.zip
+*.zip
+
+# SSH keys (paranoia — should never be in repo anyway)
+*.pem
+*.key
