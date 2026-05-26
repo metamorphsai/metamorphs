@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 const GITHUB_URL = 'https://github.com/metamorphsai/metamorphs'
 const TELEGRAM_URL = 'https://t.me/metamorphsai'
 const X_URL = 'https://x.com/metamorphs_ai'
@@ -28,35 +26,8 @@ function IconX() {
   )
 }
 
-function GitHubModal({ open, onClose }) {
-  useEffect(() => {
-    if (!open) return
-    const onKey = (e) => { if (e.key === 'Escape') onClose() }
-    document.addEventListener('keydown', onKey)
-    return () => document.removeEventListener('keydown', onKey)
-  }, [open, onClose])
-
-  if (!open) return null
-  return (
-    <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal="true">
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <div className="modal__head">
-          <span className="eyebrow">GitHub repository</span>
-          <button className="modal__close" onClick={onClose} aria-label="Close">×</button>
-        </div>
-        <div className="modal__url" aria-label="repository URL">{GITHUB_URL}</div>
-        <p className="modal__msg">◼ coming soon · open-source</p>
-        <p className="modal__sub">
-          The repository will go public when v1.0 ships. Follow our Telegram or X for the release.
-        </p>
-      </div>
-    </div>
-  )
-}
-
 export default function Nav({ route = '/' }) {
   const isDash = route === '/dashboard'
-  const [ghOpen, setGhOpen] = useState(false)
 
   return (
     <header className="nav">
@@ -75,11 +46,7 @@ export default function Nav({ route = '/' }) {
         </nav>
         <span className="nav__spacer" />
         <div className="nav__socials" aria-label="Social links">
-          <a
-            href={GITHUB_URL}
-            onClick={(e) => { e.preventDefault(); setGhOpen(true) }}
-            aria-label="GitHub (coming soon)"
-          >
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <IconGitHub />
           </a>
           <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Telegram">
@@ -91,7 +58,6 @@ export default function Nav({ route = '/' }) {
         </div>
         <a href="#/dashboard" className="btn btn--small">Submit your idea</a>
       </div>
-      <GitHubModal open={ghOpen} onClose={() => setGhOpen(false)} />
     </header>
   )
 }
