@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 
-const LAUNCH_AT = Date.UTC(2026, 4, 27, 15, 0, 0)
+const LAUNCH_AT = Date.UTC(2026, 4, 27, 18, 0, 0)
 
 // ▼ Paste the contract address here when launch goes live. Leave '' to show "comingsoon".
-const TOKEN_CA = 'BFexMwKgCWCaZMrTUR9QH2EprSqHjqRzkVAM7te9pump'
+const TOKEN_CA = ''
 const PUMPFUN_BASE = 'https://pump.fun/coin/'
 
 function pad(n) { return String(n).padStart(2, '0') }
@@ -51,7 +51,7 @@ export default function TokenStrip() {
       <div className="tstrip__inner">
         <div className="tstrip__cell tstrip__status">
           <span className="tstrip__status-dot">{t.live ? '◼ LIVE' : '◼ T-MINUS'}</span>
-          <span className="tstrip__date">MAY 27 · 3 PM UTC</span>
+          <span className="tstrip__date">MAY 27 · 6 PM UTC</span>
         </div>
 
         <div className="tstrip__cell tstrip__ticker">$MEMO</div>
