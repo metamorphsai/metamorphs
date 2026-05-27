@@ -49,6 +49,11 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Anchor scroll lands below the sticky nav */
+html {
+  scroll-padding-top: 72px;
+}
+
 body {
   position: relative;
 }
