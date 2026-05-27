@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 const LAUNCH_AT = Date.UTC(2026, 4, 27, 15, 0, 0)
 
 // ▼ Paste the contract address here when launch goes live. Leave '' to show "comingsoon".
-const TOKEN_CA = ''
+const TOKEN_CA = 'BFexMwKgCWCaZMrTUR9QH2EprSqHjqRzkVAM7te9pump'
 const PUMPFUN_BASE = 'https://pump.fun/coin/'
 
 function pad(n) { return String(n).padStart(2, '0') }
